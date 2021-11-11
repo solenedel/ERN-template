@@ -4,21 +4,21 @@ import { useAppContext } from '../context';
 import { AllFavCafes } from './AllFavCafes';
 
 // eslint-disable-next-line
-export const FavsPage = ({ className }) => {
+export const PageOne = ({ className }) => {
   const { userContext } = useAppContext();
   // eslint-disable-next-line
   const [user, setUser] = userContext;
   // eslint-disable-next-line
-  const [favCafes, setFavCafes] = useState([]);
+  // const [favCafes, setFavCafes] = useState([]);
 
   // result.rows in express back end is equal to res.data in front end
   useEffect(() => {
     axios
       // get data from server side
-      .get('/favourites')
+      .get('/route-1')
       .then((res) => {
         console.log('res.data: ', res.data);
-        setFavCafes(res.data);
+        // setFavCafes(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -27,38 +27,37 @@ export const FavsPage = ({ className }) => {
 
   // delete a favourite by clicking on remove button
   // eslint-disable-next-line
-  const removeFavCafe = (id) => {
-    if (window.confirm('Delete this favourite?')) {
-      console.log('user clicked confirm');
-    } else {
-      return;
-    }
+  // const removeFavCafe = (id) => {
+  //   if (window.confirm('Delete this favourite?')) {
+  //     console.log('user clicked confirm');
+  //   } else {
+  //     return;
+  //   }
 
-    axios
-      .delete(`/favourites/${id}`)
-      .then(() => {
-        console.log(`Successfully deleted favourite id ${id}`);
+  //   axios
+  //     .delete(`/favourites/${id}`)
+  //     .then(() => {
+  //       console.log(`Successfully deleted favourite id ${id}`);
 
-        // Generate new list of fav cafes
-        const newFavCafes = favCafes.reduce((acc, fav) => {
-          if (fav.fav_id === id) {
-            return acc;
-          }
-          acc.push(fav);
-          return acc;
-        }, []);
-        console.log('newFavCafes', newFavCafes);
-        setFavCafes(newFavCafes);
-      })
-      .catch((err) => console.log('❌ error deleting list (react): ', err));
-  };
+  //       // Generate new list of fav cafes
+  //       const newFavCafes = favCafes.reduce((acc, fav) => {
+  //         if (fav.fav_id === id) {
+  //           return acc;
+  //         }
+  //         acc.push(fav);
+  //         return acc;
+  //       }, []);
+  //       console.log('newFavCafes', newFavCafes);
+  //       setFavCafes(newFavCafes);
+  //     })
+  //     .catch((err) => console.log('❌ error deleting list (react): ', err));
+  // };
 
   return (
-    <main className={className} id="favs-page-container">
-      <img src="./images/cafe-2.png" alt="cafe icon" />
+    <main className={className} id="page-one-container">
       <h3>My favourite cafés</h3>
-      <p>{!user.auth ? 'You must log in to see your favourite cafés.' : ''}</p>
-      <AllFavCafes removeFavCafe={removeFavCafe} favCafes={favCafes} />
+      <p>{!user.auth ? 'You must log in.' : ''}</p>
+      {/* <AllFavCafes removeFavCafe={removeFavCafe} favCafes={favCafes} /> */}
     </main>
   );
 };

@@ -7,7 +7,7 @@ const Footer = ({ className }) => {
       <h4>Contact us</h4>
       <div id="footer-content">
         <ul>
-          <li>cafe.finder@mail.com</li>
+          <li>sample@mail.com</li>
           <div className="credits">
             {/* eslint-disable-next-line */}
           Icons by <a href="https://www.freepik.com" title="Freepik">Freepik </a>

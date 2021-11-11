@@ -5,7 +5,7 @@ import Map from './Map';
 export const HomePage = ({ className }) => {
   return (
     <main className={className} id="home-page-container">
-      <div>Find cafés near you.</div>
+      <div>This is a cool website</div>
       <img src="./images/coffee-1.png" alt="coffee icon" />
       <section id="search-section">
         <form onSubmit={(event) => event.preventDefault()}>
