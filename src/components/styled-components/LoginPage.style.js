@@ -4,7 +4,7 @@ import LoginPage from '../LoginPage';
 import { colorVars, mainButtonStyles, inputFieldStyles } from './css-variables';
 
 export const StyledLoginPage = styled(LoginPage)`
-  color: ${colorVars.primaryDarkBrown};
+  color: ${colorVars.primaryDark};
   font-size: 30px;
 
   & p {
@@ -26,7 +26,7 @@ export const StyledLoginPage = styled(LoginPage)`
     }
 
     &::placeholder {
-      color: ${colorVars.primaryDarkBrown};
+      color: ${colorVars.primaryDark};
       opacity: 0.6;
       padding-left: 5px;
     }

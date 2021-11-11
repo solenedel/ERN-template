@@ -4,7 +4,7 @@ import Nav from '../Nav';
 import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
-  background-color: ${colorVars.primaryDarkBrown};
+  background-color: ${colorVars.primaryDark};
   height: 90px;
 
   & #nav-flexbox {
@@ -14,7 +14,7 @@ export const StyledNav = styled(Nav)`
   }
 
   #logo-link {
-    color: ${colorVars.primaryLightBrown};
+    color: ${colorVars.primaryLight};
     text-decoration: none;
   }
 
@@ -28,7 +28,7 @@ export const StyledNav = styled(Nav)`
       font-size: 28px;
       transition: color 0.4s;
       text-decoration: none;
-      color: ${colorVars.primaryLightBrown};
+      color: ${colorVars.primaryLight};
 
       &:hover {
         color: ${colorVars.pinkHover};

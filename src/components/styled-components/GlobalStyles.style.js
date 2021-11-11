@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   padding: 0;
 }
   body {
-    background-color: ${colorVars.primaryLightBrown};
+    background-color: ${colorVars.primaryLight};
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;

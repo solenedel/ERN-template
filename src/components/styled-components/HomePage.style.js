@@ -26,13 +26,13 @@ export const StyledHomePage = styled(HomePage)`
     left: 13%;
     z-index: 10;
     font-size: 25px;
-    color: ${colorVars.primaryDarkBrown};
+    color: ${colorVars.primaryDark};
   }
 
   & div {
     font-size: 25px;
     margin-bottom: 30px;
-    color: ${colorVars.primaryDarkBrown};
+    color: ${colorVars.primaryDark};
   }
 
   & #search-section {
@@ -49,7 +49,7 @@ export const StyledHomePage = styled(HomePage)`
       }
 
       &::placeholder {
-        color: ${colorVars.primaryDarkBrown};
+        color: ${colorVars.primaryDark};
         opacity: 0.6;
         padding-left: 5px;
       }

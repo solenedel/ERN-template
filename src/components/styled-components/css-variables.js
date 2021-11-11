@@ -1,7 +1,7 @@
 // colors
 const colorVars = {
-  primaryDarkBrown: '#5a3924',
-  primaryLightBrown: '#f2dcc4',
+  primaryDark: '#4C1FDE',
+  primaryLight: '#EFEEF5',
   pinkHover: '#fca4b5',
   darkPink: '#D88091',
   mediumPink: '#F6C2CC',

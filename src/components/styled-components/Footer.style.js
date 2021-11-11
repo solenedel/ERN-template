@@ -4,10 +4,10 @@ import Footer from '../Footer';
 import { colorVars, fontVars } from './css-variables';
 
 export const StyledFooter = styled(Footer)`
-  background-color: ${colorVars.primaryDarkBrown};
+  background-color: ${colorVars.primaryDark};
   height: 115px;
   width: 100vw;
-  color: ${colorVars.primaryLightBrown};
+  color: ${colorVars.primaryLight};
   position: static;
   /* margin-top: 100px; */
 
@@ -35,7 +35,7 @@ export const StyledFooter = styled(Footer)`
       & a,
       a:hover,
       a:active {
-        color: ${colorVars.primaryLightBrown};
+        color: ${colorVars.primaryLight};
       }
     }
   }
