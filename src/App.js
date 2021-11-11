@@ -28,7 +28,7 @@ function App() {
               <Route exact path="/">
                 <StyledHomePage />
               </Route>
-              <Route path="/favourites">
+              <Route path="/route-1">
                 <StyledFavsPage />
               </Route>
               <Route exact path="/login">

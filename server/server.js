@@ -101,15 +101,12 @@ app.post('/logout', (req, res) => {
   res.json({ auth: false });
 });
 
-// -------------------- Favourites routes -------------------- //
+// -------------------- Sample routes -------------------- //
 
 // GET: favourites page (shows list of user's favs)
-app.get('/favourites', (req, res) => {
+app.get('/route-1', (req, res) => {
   if (req.session || req.session.user) {
-    const text = `SELECT favorites.*, favorites.id AS fav_id, cafes.*, users.* FROM favorites
-                  JOIN users ON users.id = user_id
-                  JOIN cafes ON cafes.id = cafe_id
-                  WHERE user_id = $1;`;
+    const text = ``; // SQL query here
     const values = [req.session.user];
     db.query(text, values)
       .then((results) => {
@@ -124,12 +121,9 @@ app.get('/favourites', (req, res) => {
 });
 
 // DELETE: remove a cafe from user's favourites
-app.delete('/favourites/:favId', (req, res) => {
+app.delete('/route-1/:id', (req, res) => {
   if (req.session || req.session.user) {
-    const text = `DELETE
-                  FROM favorites
-                  WHERE id = $1
-                  RETURNING id;`;
+    const text = ``; // SQL query here
     const values = [req.params.favId];
     db.query(text, values)
       .then((data) => {

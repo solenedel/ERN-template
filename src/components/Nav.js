@@ -54,8 +54,8 @@ const Nav = ({ className }) => {
         </Link>
 
         <ul>
-          <Link to="/favourites">
-            <li>Favourites</li>
+          <Link to="/route-1">
+            <li>Sample route</li>
           </Link>
           {user.auth ? LogoutButton() : LoginButton()}
         </ul>
