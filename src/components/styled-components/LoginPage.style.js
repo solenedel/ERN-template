@@ -13,7 +13,8 @@ export const StyledLoginPage = styled(LoginPage)`
 
   & img {
     width: 100px;
-    margin-top: 30px;
+    padding-bottom: 20px;
+    margin-top: 50px;
   }
 
   & input {
@@ -48,6 +49,7 @@ export const StyledLoginPage = styled(LoginPage)`
   div#no-account {
     font-size: 20px;
     margin-bottom: 29px;
+    margin-top: 20px;
   }
 
   & button {
