@@ -53,12 +53,7 @@ const Nav = ({ className }) => {
           <div id="logo">Café Finder</div>
         </Link>
 
-        <ul>
-          <Link to="/route-1">
-            <li>Sample route</li>
-          </Link>
-          {user.auth ? LogoutButton() : LoginButton()}
-        </ul>
+        <ul>{user.auth ? LogoutButton() : LoginButton()}</ul>
       </div>
     </nav>
   );
