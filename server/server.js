@@ -4,15 +4,12 @@ const express = require('express');
 const cookieSession = require('cookie-session');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
-// const { cafeSearchHelper } = require('./routes/searchRouter');
-// const axios = require('axios');
 
 const dotenvPath = '../.env';
 require('dotenv').config({ path: dotenvPath });
 
 // PG database client/connection setup
 const { Pool } = require('pg');
-// const { Data } = require('@react-google-maps/api');
 const dbParams = require('./db/dbParams');
 
 const db = new Pool(dbParams);
@@ -44,7 +41,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-/* HASH FUNCTION: store hashed pw in database
+/* PASSWORD HASH FUNCTION: hashed password should be stored in database
 bcrypt.hash('ENTER PASSWORD', 10, (err, hash) => {
   if (err) console.log(err);
   console.log('hash: ', hash);
@@ -150,6 +147,4 @@ app.delete('/favourites/:favId', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`✅ Express is listening on port ${PORT}`);
-
-  // cafeSearchHelper('Vancouver');
 });
