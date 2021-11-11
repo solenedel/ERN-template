@@ -7,7 +7,6 @@ import { AppContainer } from './components/styled-components/AppContainer';
 import { PageContainer } from './components/styled-components/PageContainer';
 import { StyledFooter } from './components/styled-components/Footer.style';
 import { StyledLoginPage } from './components/styled-components/LoginPage.style';
-import { StyledFavsPage } from './components/styled-components/FavsPage.style';
 import { AppContext } from './context';
 
 function App() {
@@ -27,9 +26,6 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <StyledHomePage />
-              </Route>
-              <Route path="/route-1">
-                <StyledFavsPage />
               </Route>
               <Route exact path="/login">
                 <StyledLoginPage />
