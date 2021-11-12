@@ -58,7 +58,7 @@ export const StyledLoginPage = styled(LoginPage)`
     @include ${mainButtonStyles};
 
     &:hover {
-      color: ${colorVars.pinkHover};
+      color: ${colorVars.linkHover};
       transition: color 0.4s;
     }
   }

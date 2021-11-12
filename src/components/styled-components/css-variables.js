@@ -2,9 +2,9 @@
 const colorVars = {
   primaryDark: '#4C1FDE',
   primaryLight: '#EFEEF5',
-  pinkHover: '#fca4b5',
-  darkPink: '#D88091',
-  mediumPink: '#F6C2CC',
+  linkHover: '#F9C6FE',
+  darkPink: '#F9C6FE',
+  mediumPink: '#F9C6FE',
 };
 
 // fonts
@@ -16,12 +16,12 @@ const fontVars = {
 // Mixins
 const mainButtonStyles = {
   margin: `20px`,
-  backgroundColor: `${colorVars.primaryDarkBrown}`,
-  color: `${colorVars.primaryLightBrown}`,
+  backgroundColor: `${colorVars.primaryDark}`,
+  color: `${colorVars.primaryLight}`,
   fontSize: `20px`,
   borderRadius: `5px`,
-  height: `30px`,
-  width: `fit-content`,
+  height: `37px`,
+  width: `70px`,
   transition: `color 0.4s`,
 };
 

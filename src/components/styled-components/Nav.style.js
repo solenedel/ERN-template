@@ -31,7 +31,7 @@ export const StyledNav = styled(Nav)`
       color: ${colorVars.primaryLight};
 
       &:hover {
-        color: ${colorVars.pinkHover};
+        color: ${colorVars.linkHover};
         transition: color 0.4s;
       }
     }

@@ -58,7 +58,7 @@ export const StyledFooter = styled(Footer)`
       transition: color 0.4s;
 
       &:hover {
-        color: ${colorVars.pinkHover};
+        color: ${colorVars.linkHover};
         transition: color 0.4s;
       }
     }
