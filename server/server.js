@@ -41,12 +41,11 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-/* PASSWORD HASH FUNCTION: hashed password should be stored in database
-bcrypt.hash('ENTER PASSWORD', 10, (err, hash) => {
-  if (err) console.log(err);
-  console.log('hash: ', hash);
-});
-*/
+// PASSWORD HASH FUNCTION: hashed password should be stored in database
+// bcrypt.hash('ENTER PASSWORD', 10, (err, hash) => {
+//   if (err) console.log(err);
+//   console.log('hash: ', hash);
+// });
 
 // -------------------- Login / logout routes -------------------- //
 
