@@ -14,7 +14,7 @@ CREATE TABLE posts (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   text VARCHAR(255) NOT NULL,
-  likes INTEGER,
+  likes INTEGER
 );
 
 -- NOTE: need join table for likes (many to many)
