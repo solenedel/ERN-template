@@ -16,3 +16,10 @@ After creating a Postgres database, in PSQL run:
 
 To reset the database subsequently, run in the node terminal: `npm run reset-db`
 
+## Features
+
+- home page
+- login & logout
+- posts page (visible to all users, but only logged in users can post)
+
+
