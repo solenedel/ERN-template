@@ -100,37 +100,38 @@ app.post('/logout', (req, res) => {
   res.json({ auth: false });
 });
 
-// -------------------- Sample routes -------------------- //
+// -------------------- posts routes -------------------- //
 
-// GET: favourites page (shows list of user's favs)
-app.get('/route-1', (req, res) => {
-  if (req.session || req.session.user) {
-    const text = ``; // SQL query here
-    const values = [req.session.user];
-    db.query(text, values)
-      .then((results) => {
-        console.log(results.rows);
-        res.json(results.rows);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.json([]);
-      });
-  }
+// GET: posts
+app.get('/posts', (req, res) => {
+  const text = `SELECT * FROM posts;`;
+  // const values = [req.session.user];
+  db.query(text)
+    .then((results) => {
+      console.log(results.rows);
+      res.json(results.rows);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json([]);
+    });
 });
 
-// DELETE: remove a cafe from user's favourites
-app.delete('/route-1/:id', (req, res) => {
-  if (req.session || req.session.user) {
-    const text = ``; // SQL query here
-    const values = [req.params.favId];
+// DELETE: delete a post (only by same user)
+app.delete('/posts/:postId', (req, res) => {
+  if (!req.session || !req.session.user) {
+    const text = `DELETE
+                  FROM posts
+                  WHERE id = $1
+                  RETURNING id;`; // SQL query here
+    const values = [req.params.postId];
     db.query(text, values)
       .then((data) => {
-        console.log('☑️ DELETED fav (server side): ', res.json({ deleted: data.rows }));
+        console.log('☑️ DELETED post (server side): ', res.json({ deleted: data.rows }));
         res.json({ deleted: data.rows });
       })
       .catch((err) => {
-        console.log('❌ Error deleting fav (server side): ', err);
+        console.log('❌ Error deleting post (server side): ', err);
         res.json({ deleted: false });
       });
   }
