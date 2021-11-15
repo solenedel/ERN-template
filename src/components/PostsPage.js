@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useAppContext } from '../context';
 
 // eslint-disable-next-line
-export const Posts = ({ className }) => {
+export const PostsPage = ({ className }) => {
   const { userContext } = useAppContext();
   // eslint-disable-next-line
   const [user, setUser] = userContext;

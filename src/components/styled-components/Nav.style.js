@@ -21,6 +21,7 @@ export const StyledNav = styled(Nav)`
   & ul {
     display: flex;
     justify-content: flex-end;
+    margin-top: 15px;
 
     & li,
     a {
