@@ -30,6 +30,7 @@ function App() {
               <Route exact path="/login">
                 <StyledLoginPage />
               </Route>
+              <Route exact path="/posts" />
             </Switch>
           </PageContainer>
           <StyledFooter />

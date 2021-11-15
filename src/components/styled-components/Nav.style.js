@@ -30,6 +30,10 @@ export const StyledNav = styled(Nav)`
       text-decoration: none;
       color: ${colorVars.primaryLight};
 
+      &:visited {
+        color: ${colorVars.primaryLight};
+      }
+
       &:hover {
         color: ${colorVars.linkHover};
         transition: color 0.4s;
